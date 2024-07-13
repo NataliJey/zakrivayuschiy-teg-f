@@ -27,6 +27,45 @@
   min-block-size: 100dvb;
 }
 
+.button {
+  position: relative;
+  z-index: 1;
+  border: 2px solid var(--main-color, #000000);
+  padding: 10px 36px;
+  font-family: var(--page-accent-font-family, "PressStart2P", fantasy);
+  font-size: 14px;
+  text-transform: inherit;
+  background: var(--page-background-color, #ffffff);
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+  appearance: none;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  box-shadow: 2px 2px 0 0 var(--main-color, #000000);
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--main-color, #000000);
+  transition: transform 0.5s ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.button:hover::before {
+  transform: scaleX(1);
+}
+
 .header {
   display: grid;
   justify-items: center;
@@ -180,6 +219,11 @@
   padding: 27px 21px 24px 25px;
 }
 
+.card__like-button {
+  inline-size: 130px;
+  padding: 10px 17px;
+}
+
 .card__icon-button {
   display: grid;
   border: 2px solid transparent;
@@ -196,45 +240,6 @@
 
 .card__icon-button:focus-visible {
   border-color: var(--main-color, #000000);
-}
-
-.button {
-  position: relative;
-  z-index: 1;
-  border: 2px solid var(--main-color, #000000);
-  padding: 10px 36px;
-  font-family: var(--page-accent-font-family, "PressStart2P", fantasy);
-  font-size: 14px;
-  text-transform: inherit;
-  background: var(--page-background-color, #ffffff);
-  transition: box-shadow 0.3s ease;
-  cursor: pointer;
-  appearance: none;
-}
-
-.button:focus {
-  outline: none;
-}
-
-.button:focus-visible {
-  box-shadow: 2px 2px 0 0 var(--main-color, #000000);
-}
-
-.button::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background: var(--main-color, #000000);
-  transition: transform 0.5s ease-in-out;
-  transform: scaleX(0);
-  transform-origin: left;
-  inline-size: 100%;
-  block-size: 100%;
-}
-
-.button:hover::before {
-  transform: scaleX(1);
 }
 
 .button__text,
@@ -289,6 +294,7 @@
   color: var(--main-color, #000000);
   font-family: var(--page-accent-font-family, "PressStart2P", fantasy);
   line-height: 1.5;
+  font-size: 14px;
   text-transform: uppercase;
   background: var(--page-background-color, #ffffff);
   max-inline-size: 355px;
@@ -332,7 +338,7 @@
 
 /*adaptive styles*/
 
-@media (width < 375px) {
+@media (width <= 375px) {
   .modal {
     padding: 28px 34px 28px 40px;
     max-inline-size: 340px;
@@ -345,6 +351,11 @@
   .button-icon {
     block-size: 28px;
     inline-size: 28px;
+  }
+
+  .card-image-label{
+    inset-inline-end: 12px;
+    inset-block-start: 21px;
   }
 }
 

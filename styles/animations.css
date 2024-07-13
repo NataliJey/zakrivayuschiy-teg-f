@@ -23,7 +23,7 @@
 }
 
 .like-icon .contour {
-  fill: var(--like-contour-color, #000000);
+  fill: var(--main-color, #000000);
   transition: fill 0.1s linear;
 }
 
@@ -36,12 +36,12 @@
 }
 
 .like-icon:hover .core {
-  fill: var(--like-contour-color, #000000);
+  fill: var(--main-color, #000000);
   transition: fill 0.3s linear;
 }
 
 .like-icon:hover .main-body {
-  fill: var(--like-contour-color, #000000);
+  fill: var(--main-color, #000000);
   transition: fill 0.3s linear 0.05s;
 }
 

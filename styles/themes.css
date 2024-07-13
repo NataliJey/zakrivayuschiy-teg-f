@@ -8,7 +8,7 @@
   --headings-font-weight: 700;
   --main-font-weight: 400;
   --button-text-color: #fff;
-  --text-color: #000000;
+  --main-color: #000000;
   --page-background-color: #ffffff;
   --page-background-image: repeating-linear-gradient(
     to left,
@@ -23,7 +23,7 @@
   --headings-font-weight: 785;
   --main-font-weight: 465;
   --button-text-color: #00cc14;
-  --text-color: #00cc14;
+  --main-color: #00cc14;
   --page-background-color: #000000;
   --page-background-image: repeating-linear-gradient(
     to left,
@@ -39,7 +39,7 @@
     --headings-font-weight: 785;
     --main-font-weight: 465;
     --button-text-color: #00cc14;
-    --text-color: #00cc14;
+    --main-color: #00cc14;
     --page-background-color: #000000;
     --page-background-image: repeating-linear-gradient(
       to left,
